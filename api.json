@@ -5,7 +5,7 @@
     "title": "API 0.9",
     "description": "The current state of the original Vend API.",
     "x-stoplight": {
-      "id": "vend/specs/api-0-x-temp"
+      "id": "vend/specs/api-0-9"
     }
   },
   "x-explorer-enabled": false,
@@ -1488,25 +1488,8 @@
             "$ref": "#/definitions/Consignment"
           }
         },
-        "results": {
-          "description": "Total amount of objects matching the query.",
-          "type": "integer",
-          "format": "int32"
-        },
-        "page": {
-          "description": "Current page.",
-          "type": "integer",
-          "format": "int32"
-        },
-        "page_size": {
-          "description": "Current page size.",
-          "type": "integer",
-          "format": "int32"
-        },
-        "pages": {
-          "description": "The total amount of pages to iterate through.",
-          "type": "integer",
-          "format": "int32"
+        "pagination": {
+          "$ref": "#/definitions/Pagination"
         }
       }
     },
@@ -2225,7 +2208,7 @@
     },
     "Pagination": {
       "title": "Pagination",
-      "description": "Pagination object",
+      "description": "Optional pagination object",
       "type": "object",
       "properties": {
         "results": {
