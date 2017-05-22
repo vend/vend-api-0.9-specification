@@ -29,9 +29,6 @@
           "Consignments"
         ],
         "operationId": "ListConsignments",
-        "produces": [
-          "application/json"
-        ],
         "parameters": [
           {
             "name": "since",
@@ -108,9 +105,6 @@
           "Consignments"
         ],
         "operationId": "NewConsignment",
-        "produces": [
-          "application/json"
-        ],
         "parameters": [
           {
             "name": "consignment",
@@ -164,9 +158,6 @@
           "Consignments"
         ],
         "operationId": "GetConsignmentByID",
-        "produces": [
-          "application/json"
-        ],
         "parameters": [
           {
             "name": "consignment_id",
@@ -209,9 +200,6 @@
           "Consignments"
         ],
         "operationId": "UpdateConsignment",
-        "produces": [
-          "application/json"
-        ],
         "parameters": [
           {
             "name": "consignment_id",
@@ -278,9 +266,6 @@
           "Consignments"
         ],
         "operationId": "DeleteConsignment",
-        "produces": [
-          "application/json"
-        ],
         "parameters": [
           {
             "name": "consignment_id",
@@ -319,9 +304,6 @@
           "Consignment Products"
         ],
         "operationId": "ListConsignmentProducts",
-        "produces": [
-          "application/json"
-        ],
         "parameters": [
           {
             "name": "consignment_id",
@@ -368,9 +350,6 @@
           "Consignment Products"
         ],
         "operationId": "NewConsignmentProduct",
-        "produces": [
-          "application/json"
-        ],
         "parameters": [
           {
             "name": "body",
@@ -421,9 +400,6 @@
           "Consignment Products"
         ],
         "operationId": "GetConsignmentProductByID",
-        "produces": [
-          "application/json"
-        ],
         "parameters": [
           {
             "name": "consignment_product_id",
@@ -450,9 +426,6 @@
           "Consignment Products"
         ],
         "operationId": "UpdateConsignmentProduct",
-        "produces": [
-          "application/json"
-        ],
         "parameters": [
           {
             "name": "consignment_product_id",
@@ -488,9 +461,6 @@
           "Consignment Products"
         ],
         "operationId": "DeleteConsignmentProduct",
-        "produces": [
-          "application/json"
-        ],
         "parameters": [
           {
             "name": "consignment_product_id",
@@ -515,9 +485,6 @@
           "Customers"
         ],
         "operationId": "ListCustomers",
-        "produces": [
-          "application/json"
-        ],
         "parameters": [
           {
             "name": "id",
@@ -578,9 +545,6 @@
           "Customers"
         ],
         "operationId": "CreateUpdateCustomer",
-        "produces": [
-          "application/json"
-        ],
         "parameters": [
           {
             "name": "body",
@@ -610,9 +574,6 @@
           "Outlets"
         ],
         "operationId": "ListOutlets",
-        "produces": [
-          "application/json"
-        ],
         "parameters": [],
         "responses": {
           "200": {
@@ -632,9 +593,6 @@
           "Payment Types"
         ],
         "operationId": "ListPaymentTypes",
-        "produces": [
-          "application/json"
-        ],
         "parameters": [],
         "responses": {
           "200": {
@@ -654,9 +612,6 @@
           "Products"
         ],
         "operationId": "ListProducts",
-        "produces": [
-          "application/json"
-        ],
         "parameters": [
           {
             "name": "order_by",
@@ -742,9 +697,6 @@
           "Products"
         ],
         "operationId": "CreateUpdateProduct",
-        "produces": [
-          "application/json"
-        ],
         "parameters": [
           {
             "name": "product",
@@ -774,9 +726,6 @@
           "Products"
         ],
         "operationId": "GetProductByID",
-        "produces": [
-          "application/json"
-        ],
         "parameters": [
           {
             "name": "product_id",
@@ -803,9 +752,6 @@
           "Products"
         ],
         "operationId": "DeleteProduct",
-        "produces": [
-          "application/json"
-        ],
         "parameters": [
           {
             "name": "product_id",
@@ -830,9 +776,6 @@
           "Register sales"
         ],
         "operationId": "ListRegisterSales",
-        "produces": [
-          "application/json"
-        ],
         "parameters": [
           {
             "name": "since",
@@ -893,9 +836,6 @@
           "Register sales"
         ],
         "operationId": "CreateUpdateRegisterSale",
-        "produces": [
-          "application/json"
-        ],
         "parameters": [
           {
             "name": "regsiter_sale",
@@ -925,9 +865,6 @@
           "Register sales"
         ],
         "operationId": "GetRegisterSaleByID",
-        "produces": [
-          "application/json"
-        ],
         "parameters": [
           {
             "name": "sale_id",
@@ -956,9 +893,6 @@
           "Registers"
         ],
         "operationId": "ListRegisters",
-        "produces": [
-          "application/json"
-        ],
         "parameters": [
           {
             "in": "query",
@@ -985,9 +919,6 @@
           "Suppliers"
         ],
         "operationId": "ListSuppliers",
-        "produces": [
-          "application/json"
-        ],
         "parameters": [
           {
             "in": "query",
@@ -1018,9 +949,6 @@
           "Suppliers"
         ],
         "operationId": "CreateUpdateSupplier",
-        "produces": [
-          "application/json"
-        ],
         "parameters": [
           {
             "name": "body",
@@ -1050,9 +978,6 @@
           "Suppliers"
         ],
         "operationId": "GetSupplierByID",
-        "produces": [
-          "application/json"
-        ],
         "parameters": [
           {
             "name": "supplier_id",
@@ -1078,9 +1003,6 @@
           "Suppliers"
         ],
         "operationId": "DeleteSupplier",
-        "produces": [
-          "application/json"
-        ],
         "parameters": [
           {
             "name": "supplier_id",
@@ -1106,9 +1028,6 @@
           "Taxes"
         ],
         "operationId": "ListTaxes",
-        "produces": [
-          "application/json"
-        ],
         "parameters": [],
         "responses": {
           "200": {
@@ -1126,9 +1045,6 @@
           "Taxes"
         ],
         "operationId": "CreateTax",
-        "produces": [
-          "application/json"
-        ],
         "parameters": [
           {
             "name": "body",
@@ -1158,9 +1074,6 @@
           "Taxes"
         ],
         "operationId": "GetTaxByID",
-        "produces": [
-          "application/json"
-        ],
         "parameters": [
           {
             "name": "tax_id",
@@ -1188,9 +1101,6 @@
           "Users"
         ],
         "operationId": "ListUsers",
-        "produces": [
-          "application/json"
-        ],
         "parameters": [],
         "responses": {
           "200": {
@@ -1210,9 +1120,6 @@
           "Webhooks"
         ],
         "operationId": "ListWebhooks",
-        "produces": [
-          "application/json"
-        ],
         "parameters": [],
         "responses": {
           "200": {
@@ -1233,9 +1140,6 @@
           "Webhooks"
         ],
         "operationId": "NewWebhook",
-        "produces": [
-          "application/json"
-        ],
         "parameters": [
           {
             "name": "webhook",
@@ -1265,9 +1169,6 @@
           "Webhooks"
         ],
         "operationId": "GetWebhookByID",
-        "produces": [
-          "application/json"
-        ],
         "parameters": [
           {
             "name": "webhook_id",
@@ -1294,9 +1195,6 @@
           "Webhooks"
         ],
         "operationId": "UpdateWebhook",
-        "produces": [
-          "application/json"
-        ],
         "parameters": [
           {
             "name": "webhook_id",
@@ -1332,9 +1230,6 @@
           "Webhooks"
         ],
         "operationId": "DeleteWebhook",
-        "produces": [
-          "application/json"
-        ],
         "parameters": [
           {
             "name": "webhook_id",
