@@ -23,7 +23,7 @@
   "paths": {
     "/consignment": {
       "get": {
-        "description": "Returns a paginated list of consignments.",
+        "description": "&gt; **deprecated** This endpoint has a 2.0 equivalent. We recommend using that instead.\nReturns a paginated list of consignments.",
         "summary": "List consignments",
         "tags": [
           "Consignments"
@@ -152,7 +152,7 @@
     },
     "/consignment/{consignment_id}": {
       "get": {
-        "description": "Returns a single consignment with a given ID.",
+        "description": "&gt; **deprecated** This endpoint has a 2.0 equivalent. We recommend using that instead.\\s\\s\n\\s\\s\nReturns a single consignment with a given ID.",
         "summary": "Get a consignment by ID",
         "tags": [
           "Consignments"
@@ -260,7 +260,7 @@
         }
       },
       "delete": {
-        "description": "Deletes the consignment with a given ID.",
+        "description": "&gt; **deprecated** This endpoint has a 2.0 equivalent. We recommend using that instead.\nDeletes the consignment with a given ID.",
         "summary": "Delete a consignment",
         "tags": [
           "Consignments"
@@ -298,7 +298,7 @@
     },
     "/consignment_product": {
       "get": {
-        "description": "Returns a paginated list of consignment products.",
+        "description": "&gt; **deprecated** This endpoint has a 2.0 equivalent. We recommend using that instead.\nReturns a paginated list of consignment products.",
         "summary": "List consignment products",
         "tags": [
           "Consignment Products"
@@ -394,7 +394,7 @@
     },
     "/consignment_product/{consignment_product_id}": {
       "get": {
-        "description": "Returns a single consignment product.",
+        "description": "&gt; **deprecated** This endpoint has a 2.0 equivalent. We recommend using that instead.\nReturns a single consignment product.",
         "summary": "Get a single consignment product by ID",
         "tags": [
           "Consignment Products"
@@ -455,7 +455,7 @@
         }
       },
       "delete": {
-        "description": "Deletes an item from the consignment.",
+        "description": "&gt; **deprecated** This endpoint has a 2.0 equivalent. We recommend using that instead.\nDeletes an item from the consignment.",
         "summary": "Delete a consignment product",
         "tags": [
           "Consignment Products"
@@ -479,7 +479,7 @@
     },
     "/customers": {
       "get": {
-        "description": "Returns a paginated list of customers.",
+        "description": "&gt; **deprecated** This endpoint has a 2.0 equivalent. We recommend using that instead.\nReturns a paginated list of customers.",
         "summary": "List customers",
         "tags": [
           "Customers"
@@ -539,7 +539,7 @@
         }
       },
       "post": {
-        "description": "Returns a single new or updated customer object.",
+        "description": "&gt; **deprecated** This endpoint has a 2.0 equivalent. We recommend using that instead.\nReturns a single new or updated customer object.",
         "summary": "Create or update a customer",
         "tags": [
           "Customers"
@@ -568,7 +568,7 @@
     },
     "/outlets": {
       "get": {
-        "description": "Returns a non-paginated list of outlets.",
+        "description": "&gt; **deprecated** This endpoint has a 2.0 equivalent. We recommend using that instead.\nReturns a non-paginated list of outlets.",
         "summary": "List outlets",
         "tags": [
           "Outlets"
@@ -587,7 +587,7 @@
     },
     "/payment_types": {
       "get": {
-        "description": "Returns a non-paginated list of payment types.",
+        "description": "&gt; **deprecated** This endpoint has a 2.0 equivalent. We recommend using that instead.\nReturns a non-paginated list of payment types.",
         "summary": "List payment types",
         "tags": [
           "Payment Types"
@@ -606,7 +606,7 @@
     },
     "/products": {
       "get": {
-        "description": "Returns a paginated list of products.",
+        "description": "&gt; **deprecated** This endpoint has a 2.0 equivalent. We recommend using that instead.\nReturns a paginated list of products.",
         "summary": "List products",
         "tags": [
           "Products"
@@ -720,7 +720,7 @@
     },
     "/products/{product_id}": {
       "get": {
-        "description": "Returns an array with a single product inside it.",
+        "description": "&gt; **deprecated** This endpoint has a 2.0 equivalent. We recommend using that instead.\nReturns an array with a single product inside it.",
         "summary": "Get a single product by ID",
         "tags": [
           "Products"
@@ -770,7 +770,7 @@
     },
     "/register_sales": {
       "get": {
-        "description": "Returns a paginated list of register sales.",
+        "description": "&gt; **deprecated** This endpoint has a 2.0 equivalent. We recommend using that instead.\nReturns a paginated list of register sales.",
         "summary": "List register sales",
         "tags": [
           "Register sales"
@@ -859,7 +859,7 @@
     },
     "/register_sales/{sale_id}": {
       "get": {
-        "description": "Returns a single register sale with the given ID, in an array.",
+        "description": "&gt; **deprecated** This endpoint has a 2.0 equivalent. We recommend using that instead.\nReturns a single register sale with the given ID, in an array.",
         "summary": "Get a single register sale by ID",
         "tags": [
           "Register sales"
@@ -887,7 +887,7 @@
     },
     "/registers": {
       "get": {
-        "description": "Returns a non-paginated list of registers.",
+        "description": "&gt; **deprecated** This endpoint has a 2.0 equivalent. We recommend using that instead.\nReturns a non-paginated list of registers.",
         "summary": "List registers",
         "tags": [
           "Registers"
@@ -913,7 +913,7 @@
     },
     "/supplier": {
       "get": {
-        "description": "Returns a paginated list of suppliers.",
+        "description": "&gt; **deprecated** This endpoint has a 2.0 equivalent. We recommend using that instead.\nReturns a paginated list of suppliers.",
         "summary": "List suppliers",
         "tags": [
           "Suppliers"
@@ -972,7 +972,7 @@
     },
     "/supplier/{supplier_id}": {
       "get": {
-        "description": "Returns a single supplier with the given ID.",
+        "description": "&gt; **deprecated** This endpoint has a 2.0 equivalent. We recommend using that instead.\nReturns a single supplier with the given ID.",
         "summary": "Get a single supplier by ID",
         "tags": [
           "Suppliers"
@@ -1022,7 +1022,7 @@
     },
     "/taxes": {
       "get": {
-        "description": "Returns a non-paginated list of taxes",
+        "description": "&gt; **deprecated** This endpoint has a 2.0 equivalent. We recommend using that instead.\nReturns a non-paginated list of taxes.",
         "summary": "List taxes",
         "tags": [
           "Taxes"
@@ -1095,7 +1095,7 @@
     },
     "/users": {
       "get": {
-        "description": "Returns a non-paginated list of users.",
+        "description": "&gt; **deprecated** This endpoint has a 2.0 equivalent. We recommend using that instead.\nReturns a non-paginated list of users.",
         "summary": "List users",
         "tags": [
           "Users"
