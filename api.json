@@ -152,7 +152,7 @@
     },
     "/consignment/{consignment_id}": {
       "get": {
-        "description": "&gt; **deprecated** This endpoint has a 2.0 equivalent. We recommend using that instead.\nReturns a single consignment with a given ID.",
+        "description": "&gt; **deprecated** This endpoint has a 2.0 equivalent. We recommend using that instead.\\s\\s\n\\s\\s\nReturns a single consignment with a given ID.",
         "summary": "Get a consignment by ID",
         "tags": [
           "Consignments"
@@ -260,7 +260,7 @@
         }
       },
       "delete": {
-        "description": "Deletes the consignment with a given ID.",
+        "description": "&gt; **deprecated** This endpoint has a 2.0 equivalent. We recommend using that instead.\nDeletes the consignment with a given ID.",
         "summary": "Delete a consignment",
         "tags": [
           "Consignments"
@@ -455,7 +455,7 @@
         }
       },
       "delete": {
-        "description": "Deletes an item from the consignment.",
+        "description": "&gt; **deprecated** This endpoint has a 2.0 equivalent. We recommend using that instead.\nDeletes an item from the consignment.",
         "summary": "Delete a consignment product",
         "tags": [
           "Consignment Products"
@@ -539,7 +539,7 @@
         }
       },
       "post": {
-        "description": "Returns a single new or updated customer object.",
+        "description": "&gt; **deprecated** This endpoint has a 2.0 equivalent. We recommend using that instead.\nReturns a single new or updated customer object.",
         "summary": "Create or update a customer",
         "tags": [
           "Customers"
