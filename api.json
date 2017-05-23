@@ -568,7 +568,7 @@
     },
     "/outlets": {
       "get": {
-        "description": "Returns a non-paginated list of outlets.\\s\\s\n**deprecated** This endpoint has a 2.0 equivalent. We recommend using that instead.",
+        "description": "&gt; **deprecated** This endpoint has a 2.0 equivalent. We recommend using that instead.\nReturns a non-paginated list of outlets.",
         "summary": "List outlets",
         "tags": [
           "Outlets"
