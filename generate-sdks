@@ -36,6 +36,5 @@ do
         --input-spec "./api.json" \
         --lang "${lang}" \
         --config "./swagger-codegen-config/${lang}.json" \
-        # --template-dir "./swagger-templates/${lang}" \
         --output "./swagger-codegen-out/${lang}"
 done

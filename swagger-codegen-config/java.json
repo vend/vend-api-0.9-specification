@@ -1,7 +1,7 @@
 {
   "modelPackage": "com.vendhq.models",
   "apiPackage": "com.vendhq.api",
-  "invokerPackage": "com.vendhq.connect",
+  "invokerPackage": "com.vendhq.api-0",
   "groupId": "com.vendhq",
   "artifactId": "api-0",
   "artifactVersion": "0.9.1",
