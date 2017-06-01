@@ -40,7 +40,6 @@ echo "Copying files..."
 rm -rf docs src/main
 cp -r ../swagger-codegen-out/java/docs .
 cp -r ../swagger-codegen-out/java/src/main ./src/
-rm ./src/main/AndroidManifest.xml
 cp ../swagger-codegen-out/java/build.gradle .
 cp ../swagger-codegen-out/java/build.sbt .
 cp ../swagger-codegen-out/java/gradle.properties .
