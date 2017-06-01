@@ -6,7 +6,7 @@ cache:
   - "$HOME/.m2"
 install:
 - ". ./ci/install-swagger-codegen.sh"
-- openssl aes-256-cbc -K $encrypted_fee8b359a955_key -iv $encrypted_fee8b359a955_iv -in ./ci/id_rsa.enc -out .ci/id_rsa -d
+- openssl aes-256-cbc -K $encrypted_fee8b359a955_key -iv $encrypted_fee8b359a955_iv -in ./ci/id_rsa.enc -out ./ci/id_rsa -d
 
 script:
 - "/bin/sh ./generate-sdks"
