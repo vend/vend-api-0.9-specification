@@ -6,6 +6,14 @@
     "description": "The current state of the original Vend API.",
     "x-stoplight": {
       "id": "vend/specs/api-0-9"
+    },
+    "contact": {
+      "name": "Vend Developer Relations Team",
+      "url": "https://developers.vendhq.com",
+      "email": "api@vendhq.com"
+    },
+    "license": {
+      "name": "Apache 2.0"
     }
   },
   "x-explorer-enabled": false,
