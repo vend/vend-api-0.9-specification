@@ -1142,7 +1142,7 @@
         }
       },
       "post": {
-        "description": "Returns a new webhook.",
+        "description": "Creates and returns a new webhook.",
         "summary": "Create a webhook",
         "tags": [
           "Webhooks"
@@ -1153,7 +1153,8 @@
             "in": "formData",
             "name": "data",
             "type": "string",
-            "description": "The value of this field should be set as a string representing a JSON payload like:\n`{\"url\":\"http://123456.ngrok.io\",\"active\":true,\"type\":\"product.update\"}`"
+            "description": "The value of this field should be set as a string representing a JSON payload like:\n`{\"url\":\"http://123456.ngrok.io\",\"active\":true,\"type\":\"product.update\"}`",
+            "required": true
           }
         ],
         "responses": {
@@ -1163,7 +1164,13 @@
               "$ref": "#/definitions/Webhook"
             }
           }
-        }
+        },
+        "consumes": [
+          "multipart/form-data"
+        ],
+        "produces": [
+          "application/json"
+        ]
       }
     },
     "/webhooks/{webhook_id}": {
