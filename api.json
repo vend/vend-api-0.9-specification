@@ -1147,20 +1147,17 @@
         "tags": [
           "Webhooks"
         ],
-        "operationId": "NewWebhook",
+        "operationId": "CreateWebhook",
         "parameters": [
           {
-            "name": "webhook",
-            "in": "body",
-            "required": true,
-            "description": "",
-            "schema": {
-              "$ref": "#/definitions/WebhookBase"
-            }
+            "in": "formData",
+            "name": "data",
+            "type": "string",
+            "description": "The value of this field should be set as a string representing a JSON payload like:\n`{\"url\":\"http://123456.ngrok.io\",\"active\":true,\"type\":\"product.update\"}`"
           }
         ],
         "responses": {
-          "200": {
+          "201": {
             "description": "",
             "schema": {
               "$ref": "#/definitions/Webhook"
