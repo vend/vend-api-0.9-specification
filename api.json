@@ -8,13 +8,14 @@
       "id": "vend/specs/api-0-9"
     },
     "contact": {
-      "name": "Vend Developer Relations Team",
+      "name": "Vend Developer Relations",
       "url": "https://developers.vendhq.com",
       "email": "api@vendhq.com"
     },
     "license": {
       "name": "Apache 2.0"
-    }
+    },
+    "termsOfService": "https://www.vendhq.com/terms"
   },
   "x-explorer-enabled": false,
   "host": "domain_prefix.vendhq.com",
@@ -3694,6 +3695,27 @@
       "required": [
         "status"
       ]
+    }
+  },
+  "security": [
+    {
+      "oauth": []
+    },
+    {
+      "personal_token": []
+    }
+  ],
+  "securityDefinitions": {
+    "oauth": {
+      "type": "oauth2",
+      "flow": "accessCode",
+      "authorizationUrl": "https://secure.vendhq.com/connect",
+      "tokenUrl": "https://domain_prefix.vendhq.com/api/1.0/token"
+    },
+    "personal_token": {
+      "type": "apiKey",
+      "name": "Authorization",
+      "in": "header"
     }
   }
 }
