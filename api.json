@@ -1123,7 +1123,7 @@
     },
     "/webhooks": {
       "get": {
-        "description": "Returns a list of webhooks.  _**NOTE:** This endpoint will only return webhooks created by the application which is making the request._",
+        "description": "Returns a list of webhooks.  *__NOTE:__ This endpoint will only return webhooks created by the application which is making the request.*",
         "summary": "List webhooks",
         "tags": [
           "Webhooks"
@@ -1159,18 +1159,28 @@
           }
         ],
         "responses": {
-          "201": {
+          "200": {
             "description": "",
             "schema": {
               "$ref": "#/definitions/Webhook"
+            },
+            "examples": {
+              "application/json": {
+                "id": "0af7b240-ab83-11e7-eddc-7311972c4cab",
+                "retailer_id": "b1c50056-f019-11e3-a0f5-b8ca3a64f8f4",
+                "user_id": "bc305bf6-6183-11e4-f15a-190c6647efc2",
+                "url": "https://12345678.ngrok.io",
+                "active": true,
+                "type": "product.update"
+              }
             }
           }
         },
-        "consumes": [
-          "multipart/form-data"
-        ],
         "produces": [
           "application/json"
+        ],
+        "consumes": [
+          "application/x-www-form-urlencoded"
         ]
       }
     },
@@ -1218,13 +1228,11 @@
             "description": "The ID of the webhook to be updated."
           },
           {
-            "name": "webhook",
-            "in": "body",
-            "required": true,
-            "description": "Updated webhook object.",
-            "schema": {
-              "$ref": "#/definitions/WebhookBase"
-            }
+            "in": "formData",
+            "name": "data",
+            "type": "string",
+            "description": "The value of this field should be set as a string representing a JSON payload like:\n`{\"active\":false}`",
+            "required": true
           }
         ],
         "responses": {
@@ -1232,9 +1240,25 @@
             "description": "",
             "schema": {
               "$ref": "#/definitions/Webhook"
+            },
+            "examples": {
+              "application/json": {
+                "id": "0af7b240-ab83-11e7-eddc-730fe466aba3",
+                "retailer_id": "b1c50056-f019-11e3-a0f5-b8ca3a64f8f4",
+                "user_id": "bc305bf6-6183-11e4-f15a-190c6647efc2",
+                "url": "https://12345678.ngrok.io",
+                "active": false,
+                "type": "product.update"
+              }
             }
           }
-        }
+        },
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/json"
+        ]
       },
       "delete": {
         "description": "Deletes the webhook with the given ID.",
@@ -1258,9 +1282,17 @@
             "description": "",
             "schema": {
               "$ref": "#/definitions/WebhookDeleteSuccess"
+            },
+            "examples": {
+              "application/json": {
+                "status": "success"
+              }
             }
           }
-        }
+        },
+        "produces": [
+          "application/json"
+        ]
       }
     }
   },
@@ -3632,13 +3664,13 @@
       "type": "object",
       "properties": {
         "id": {
-          "description": "Auto-generated object ID.",
           "type": "string",
+          "description": "Auto-generated object ID.",
           "format": "uuid"
         },
         "retailer_id": {
-          "description": "The ID of the retailer which the webhook request originated from.",
           "type": "string",
+          "description": "The ID of the retailer which the webhook request originated from.",
           "format": "uuid"
         },
         "active": {
@@ -3655,29 +3687,8 @@
         }
       },
       "required": [
-        "active",
-        "type",
-        "url"
-      ]
-    },
-    "WebhookBase": {
-      "title": "Webhook Base",
-      "type": "object",
-      "properties": {
-        "active": {
-          "description": "Indicates whether the webhook is active.",
-          "type": "boolean"
-        },
-        "type": {
-          "description": "Webhook type. One of: `product.update`, `inventory.update`, `sale.update`, `customer.update`, `consignment.receive`.",
-          "type": "string"
-        },
-        "url": {
-          "description": "The URL of the endpoint prepared for receiving webhooks.",
-          "type": "string"
-        }
-      },
-      "required": [
+        "id",
+        "retailer_id",
         "active",
         "type",
         "url"
