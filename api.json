@@ -1143,7 +1143,7 @@
         }
       },
       "post": {
-        "description": "Creates and returns a new webhook.",
+        "description": "Creates and returns a new webhook.\n__NOTE:__ The `Content-Type` header for this request should be set to `application/x-www-form-urlencoded`.",
         "summary": "Create a webhook",
         "tags": [
           "Webhooks"
@@ -1212,7 +1212,7 @@
         }
       },
       "put": {
-        "description": "Returns a single updated webhook.",
+        "description": "Updates a webhook with the given `id`.\n__NOTE:__ The `Content-Type` header for this request should be set to `application/x-www-form-urlencoded`.",
         "summary": "Update a webhook by ID",
         "tags": [
           "Webhooks"
