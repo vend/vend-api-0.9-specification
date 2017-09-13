@@ -2632,7 +2632,7 @@
           "type": "boolean",
           "description": "Indicates whether the product is currently active.\\n**NOTE:** Currently has to submitted as \"0\" or \"1\".",
           "enum": [
-            0,
+            "0",
             "1"
           ]
         },
