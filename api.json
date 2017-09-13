@@ -1143,7 +1143,7 @@
         }
       },
       "post": {
-        "description": "Creates and returns a new webhook.",
+        "description": "Creates and returns a new webhook.\n__NOTE:__ The `Content-Type` header for this request should be set to `application/x-www-form-urlencoded`.",
         "summary": "Create a webhook",
         "tags": [
           "Webhooks"
@@ -1212,7 +1212,7 @@
         }
       },
       "put": {
-        "description": "Returns a single updated webhook.",
+        "description": "Updates a webhook with the given `id`.\n__NOTE:__ The `Content-Type` header for this request should be set to `application/x-www-form-urlencoded`.",
         "summary": "Update a webhook by ID",
         "tags": [
           "Webhooks"
@@ -2629,8 +2629,12 @@
           "type": "string"
         },
         "active": {
-          "description": "Indicates whether the product is currently active.",
-          "type": "boolean"
+          "type": "boolean",
+          "description": "Indicates whether the product is currently active.\\n**NOTE:** Currently has to submitted as \"0\" or \"1\".",
+          "enum": [
+            0,
+            "1"
+          ]
         },
         "name": {
           "description": "The name of the product. Should be posted without any variant related suffixes.",
