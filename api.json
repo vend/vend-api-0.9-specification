@@ -2630,7 +2630,7 @@
         },
         "active": {
           "type": "boolean",
-          "description": "Indicates whether the product is currently active.\\n**NOTE:** Currently has to submitted as \"0\" or \"1\".",
+          "description": "Indicates whether the product is currently active.\n**NOTE:** Currently has to submitted as __\"0\"__ or __\"1\"__.",
           "enum": [
             "0",
             "1"
