@@ -38,8 +38,7 @@
           "Consignments"
         ],
         "operationId": "ListConsignments",
-        "parameters": [
-          {
+        "parameters": [{
             "name": "since",
             "in": "query",
             "required": false,
@@ -72,8 +71,7 @@
                 "page": 1,
                 "page_size": 50,
                 "pages": 2,
-                "consignments": [
-                  {
+                "consignments": [{
                     "id": "b8ca3a65-0183-11e4-fbb5-2812b9e74b37",
                     "name": "Stocktake 1",
                     "consignment_date": "2014-08-20 02:36:02",
@@ -114,25 +112,23 @@
           "Consignments"
         ],
         "operationId": "NewConsignment",
-        "parameters": [
-          {
-            "name": "consignment",
-            "in": "body",
-            "required": true,
-            "description": "A new consignment object.",
-            "schema": {
-              "$ref": "#/definitions/ConsignmentBase"
-            },
-            "x-examples": {
-              "application/json": {
-                "name": "API test 5",
-                "outlet_id": "b1e04bd8-f019-11e3-a0f5-b8ca3a64f8f4",
-                "status": "OPEN",
-                "type": "SUPPLIER"
-              }
+        "parameters": [{
+          "name": "consignment",
+          "in": "body",
+          "required": true,
+          "description": "A new consignment object.",
+          "schema": {
+            "$ref": "#/definitions/ConsignmentBase"
+          },
+          "x-examples": {
+            "application/json": {
+              "name": "API test 5",
+              "outlet_id": "b1e04bd8-f019-11e3-a0f5-b8ca3a64f8f4",
+              "status": "OPEN",
+              "type": "SUPPLIER"
             }
           }
-        ],
+        }],
         "responses": {
           "200": {
             "description": "",
@@ -167,16 +163,14 @@
           "Consignments"
         ],
         "operationId": "GetConsignmentByID",
-        "parameters": [
-          {
-            "name": "consignment_id",
-            "in": "path",
-            "required": true,
-            "type": "string",
-            "format": "uuid",
-            "description": "The ID of the consignment to get."
-          }
-        ],
+        "parameters": [{
+          "name": "consignment_id",
+          "in": "path",
+          "required": true,
+          "type": "string",
+          "format": "uuid",
+          "description": "The ID of the consignment to get."
+        }],
         "responses": {
           "200": {
             "description": "",
@@ -209,8 +203,7 @@
           "Consignments"
         ],
         "operationId": "UpdateConsignment",
-        "parameters": [
-          {
+        "parameters": [{
             "name": "consignment_id",
             "in": "path",
             "required": true,
@@ -275,15 +268,13 @@
           "Consignments"
         ],
         "operationId": "DeleteConsignment",
-        "parameters": [
-          {
-            "name": "consignment_id",
-            "in": "path",
-            "required": true,
-            "type": "string",
-            "description": "The ID of the consignment to be deleted"
-          }
-        ],
+        "parameters": [{
+          "name": "consignment_id",
+          "in": "path",
+          "required": true,
+          "type": "string",
+          "description": "The ID of the consignment to be deleted"
+        }],
         "responses": {
           "200": {
             "description": "",
@@ -313,8 +304,7 @@
           "Consignment Products"
         ],
         "operationId": "ListConsignmentProducts",
-        "parameters": [
-          {
+        "parameters": [{
             "name": "consignment_id",
             "in": "query",
             "required": true,
@@ -359,27 +349,25 @@
           "Consignment Products"
         ],
         "operationId": "NewConsignmentProduct",
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "description": "New consignment product object.",
-            "schema": {
-              "$ref": "#/definitions/ConsignmentProductBase"
-            },
-            "x-examples": {
-              "application/json": {
-                "consignment_id": "0af7b240-ab83-11e7-eddc-35e7dc9d25d0",
-                "product_id": "0af7b240-ab83-11e7-eddc-35e81b24d85f",
-                "count": 42,
-                "received": null,
-                "cost": 123.345,
-                "sequence_number": 0
-              }
+        "parameters": [{
+          "name": "body",
+          "in": "body",
+          "required": true,
+          "description": "New consignment product object.",
+          "schema": {
+            "$ref": "#/definitions/ConsignmentProductBase"
+          },
+          "x-examples": {
+            "application/json": {
+              "consignment_id": "0af7b240-ab83-11e7-eddc-35e7dc9d25d0",
+              "product_id": "0af7b240-ab83-11e7-eddc-35e81b24d85f",
+              "count": 42,
+              "received": null,
+              "cost": 123.345,
+              "sequence_number": 0
             }
           }
-        ],
+        }],
         "responses": {
           "200": {
             "description": "",
@@ -409,16 +397,14 @@
           "Consignment Products"
         ],
         "operationId": "GetConsignmentProductByID",
-        "parameters": [
-          {
-            "name": "consignment_product_id",
-            "in": "path",
-            "required": true,
-            "type": "string",
-            "format": "uuid",
-            "description": "The ID of the consignment to get."
-          }
-        ],
+        "parameters": [{
+          "name": "consignment_product_id",
+          "in": "path",
+          "required": true,
+          "type": "string",
+          "format": "uuid",
+          "description": "The ID of the consignment to get."
+        }],
         "responses": {
           "200": {
             "description": "",
@@ -435,8 +421,7 @@
           "Consignment Products"
         ],
         "operationId": "UpdateConsignmentProduct",
-        "parameters": [
-          {
+        "parameters": [{
             "name": "consignment_product_id",
             "in": "path",
             "required": true,
@@ -470,15 +455,13 @@
           "Consignment Products"
         ],
         "operationId": "DeleteConsignmentProduct",
-        "parameters": [
-          {
-            "name": "consignment_product_id",
-            "in": "path",
-            "required": true,
-            "type": "string",
-            "description": "The ID of the consignment product to be deleted."
-          }
-        ],
+        "parameters": [{
+          "name": "consignment_product_id",
+          "in": "path",
+          "required": true,
+          "type": "string",
+          "description": "The ID of the consignment product to be deleted."
+        }],
         "responses": {
           "200": {
             "description": ""
@@ -494,8 +477,7 @@
           "Customers"
         ],
         "operationId": "ListCustomers",
-        "parameters": [
-          {
+        "parameters": [{
             "name": "id",
             "in": "query",
             "required": false,
@@ -554,17 +536,15 @@
           "Customers"
         ],
         "operationId": "CreateUpdateCustomer",
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "description": "New or updated customer attributes",
-            "schema": {
-              "$ref": "#/definitions/CustomerUpdateBase"
-            }
+        "parameters": [{
+          "name": "body",
+          "in": "body",
+          "required": true,
+          "description": "New or updated customer attributes",
+          "schema": {
+            "$ref": "#/definitions/CustomerUpdateBase"
           }
-        ],
+        }],
         "responses": {
           "200": {
             "description": "",
@@ -621,8 +601,7 @@
           "Products"
         ],
         "operationId": "ListProducts",
-        "parameters": [
-          {
+        "parameters": [{
             "name": "order_by",
             "in": "query",
             "required": false,
@@ -706,17 +685,15 @@
           "Products"
         ],
         "operationId": "CreateUpdateProduct",
-        "parameters": [
-          {
-            "name": "product",
-            "in": "body",
-            "required": true,
-            "description": "New or updated product object.",
-            "schema": {
-              "$ref": "#/definitions/ProductUpdateBase"
-            }
+        "parameters": [{
+          "name": "product",
+          "in": "body",
+          "required": true,
+          "description": "New or updated product object.",
+          "schema": {
+            "$ref": "#/definitions/ProductUpdateBase"
           }
-        ],
+        }],
         "responses": {
           "200": {
             "description": "",
@@ -735,16 +712,14 @@
           "Products"
         ],
         "operationId": "GetProductByID",
-        "parameters": [
-          {
-            "name": "product_id",
-            "in": "path",
-            "required": true,
-            "type": "string",
-            "format": "uuid",
-            "description": "An ID of an existing product."
-          }
-        ],
+        "parameters": [{
+          "name": "product_id",
+          "in": "path",
+          "required": true,
+          "type": "string",
+          "format": "uuid",
+          "description": "An ID of an existing product."
+        }],
         "responses": {
           "200": {
             "description": "",
@@ -761,15 +736,13 @@
           "Products"
         ],
         "operationId": "DeleteProduct",
-        "parameters": [
-          {
-            "name": "product_id",
-            "in": "path",
-            "required": true,
-            "type": "string",
-            "description": "The ID of the product to be deleted."
-          }
-        ],
+        "parameters": [{
+          "name": "product_id",
+          "in": "path",
+          "required": true,
+          "type": "string",
+          "description": "The ID of the product to be deleted."
+        }],
         "responses": {
           "200": {
             "description": ""
@@ -785,8 +758,7 @@
           "Register sales"
         ],
         "operationId": "ListRegisterSales",
-        "parameters": [
-          {
+        "parameters": [{
             "name": "since",
             "in": "query",
             "required": false,
@@ -845,17 +817,15 @@
           "Register sales"
         ],
         "operationId": "CreateUpdateRegisterSale",
-        "parameters": [
-          {
-            "name": "regsiter_sale",
-            "in": "body",
-            "required": true,
-            "description": "New or updated register sale object.",
-            "schema": {
-              "$ref": "#/definitions/RegisterSaleUpdateBase"
-            }
+        "parameters": [{
+          "name": "regsiter_sale",
+          "in": "body",
+          "required": true,
+          "description": "New or updated register sale object.",
+          "schema": {
+            "$ref": "#/definitions/RegisterSaleUpdateBase"
           }
-        ],
+        }],
         "responses": {
           "200": {
             "description": "",
@@ -874,16 +844,14 @@
           "Register sales"
         ],
         "operationId": "GetRegisterSaleByID",
-        "parameters": [
-          {
-            "name": "sale_id",
-            "in": "path",
-            "required": true,
-            "type": "string",
-            "format": "uuid",
-            "description": "An ID of an existing sale"
-          }
-        ],
+        "parameters": [{
+          "name": "sale_id",
+          "in": "path",
+          "required": true,
+          "type": "string",
+          "format": "uuid",
+          "description": "An ID of an existing sale"
+        }],
         "responses": {
           "200": {
             "description": "",
@@ -902,14 +870,12 @@
           "Registers"
         ],
         "operationId": "ListRegisters",
-        "parameters": [
-          {
-            "in": "query",
-            "name": "deleted",
-            "type": "boolean",
-            "description": "Indicates whether deleted items should be included in the result."
-          }
-        ],
+        "parameters": [{
+          "in": "query",
+          "name": "deleted",
+          "type": "boolean",
+          "description": "Indicates whether deleted items should be included in the result."
+        }],
         "responses": {
           "200": {
             "description": "",
@@ -928,8 +894,7 @@
           "Suppliers"
         ],
         "operationId": "ListSuppliers",
-        "parameters": [
-          {
+        "parameters": [{
             "in": "query",
             "name": "page",
             "type": "number",
@@ -958,17 +923,15 @@
           "Suppliers"
         ],
         "operationId": "CreateUpdateSupplier",
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "description": "New or updated supplier attributes",
-            "schema": {
-              "$ref": "#/definitions/SupplierUpdateBase"
-            }
+        "parameters": [{
+          "name": "body",
+          "in": "body",
+          "required": true,
+          "description": "New or updated supplier attributes",
+          "schema": {
+            "$ref": "#/definitions/SupplierUpdateBase"
           }
-        ],
+        }],
         "responses": {
           "200": {
             "description": "",
@@ -987,15 +950,13 @@
           "Suppliers"
         ],
         "operationId": "GetSupplierByID",
-        "parameters": [
-          {
-            "name": "supplier_id",
-            "in": "path",
-            "required": true,
-            "type": "string",
-            "description": "An ID of an existing supplier object"
-          }
-        ],
+        "parameters": [{
+          "name": "supplier_id",
+          "in": "path",
+          "required": true,
+          "type": "string",
+          "description": "An ID of an existing supplier object"
+        }],
         "responses": {
           "200": {
             "description": "",
@@ -1012,16 +973,14 @@
           "Suppliers"
         ],
         "operationId": "DeleteSupplier",
-        "parameters": [
-          {
-            "name": "supplier_id",
-            "in": "path",
-            "required": true,
-            "type": "string",
-            "format": "uuid",
-            "description": "The ID of the supplier to be deleted."
-          }
-        ],
+        "parameters": [{
+          "name": "supplier_id",
+          "in": "path",
+          "required": true,
+          "type": "string",
+          "format": "uuid",
+          "description": "The ID of the supplier to be deleted."
+        }],
         "responses": {
           "200": {
             "description": ""
@@ -1054,17 +1013,15 @@
           "Taxes"
         ],
         "operationId": "CreateTax",
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "required": true,
-            "description": "New tax attributes.",
-            "schema": {
-              "$ref": "#/definitions/TaxBase"
-            }
+        "parameters": [{
+          "name": "body",
+          "in": "body",
+          "required": true,
+          "description": "New tax attributes.",
+          "schema": {
+            "$ref": "#/definitions/TaxBase"
           }
-        ],
+        }],
         "responses": {
           "200": {
             "description": "",
@@ -1083,15 +1040,13 @@
           "Taxes"
         ],
         "operationId": "GetTaxByID",
-        "parameters": [
-          {
-            "name": "tax_id",
-            "in": "path",
-            "required": true,
-            "type": "string",
-            "description": "An ID of an existing tax object."
-          }
-        ],
+        "parameters": [{
+          "name": "tax_id",
+          "in": "path",
+          "required": true,
+          "type": "string",
+          "description": "An ID of an existing tax object."
+        }],
         "responses": {
           "200": {
             "description": "",
@@ -1149,15 +1104,13 @@
           "Webhooks"
         ],
         "operationId": "CreateWebhook",
-        "parameters": [
-          {
-            "in": "formData",
-            "name": "data",
-            "type": "string",
-            "description": "The value of this field should be set as a string representing a JSON payload like:\n`{\"url\":\"http://123456.ngrok.io\",\"active\":true,\"type\":\"product.update\"}`",
-            "required": true
-          }
-        ],
+        "parameters": [{
+          "in": "formData",
+          "name": "data",
+          "type": "string",
+          "description": "The value of this field should be set as a string representing a JSON payload like:\n`{\"url\":\"http://123456.ngrok.io\",\"active\":true,\"type\":\"product.update\"}`",
+          "required": true
+        }],
         "responses": {
           "200": {
             "description": "",
@@ -1192,16 +1145,14 @@
           "Webhooks"
         ],
         "operationId": "GetWebhookByID",
-        "parameters": [
-          {
-            "name": "webhook_id",
-            "in": "path",
-            "required": true,
-            "type": "string",
-            "format": "uuid",
-            "description": ""
-          }
-        ],
+        "parameters": [{
+          "name": "webhook_id",
+          "in": "path",
+          "required": true,
+          "type": "string",
+          "format": "uuid",
+          "description": ""
+        }],
         "responses": {
           "200": {
             "description": "",
@@ -1218,8 +1169,7 @@
           "Webhooks"
         ],
         "operationId": "UpdateWebhook",
-        "parameters": [
-          {
+        "parameters": [{
             "name": "webhook_id",
             "in": "path",
             "required": true,
@@ -1267,16 +1217,14 @@
           "Webhooks"
         ],
         "operationId": "DeleteWebhook",
-        "parameters": [
-          {
-            "name": "webhook_id",
-            "in": "path",
-            "required": true,
-            "type": "string",
-            "format": "uuid",
-            "description": ""
-          }
-        ],
+        "parameters": [{
+          "name": "webhook_id",
+          "in": "path",
+          "required": true,
+          "type": "string",
+          "format": "uuid",
+          "description": ""
+        }],
         "responses": {
           "200": {
             "description": "",
@@ -3712,8 +3660,7 @@
       ]
     }
   },
-  "security": [
-    {
+  "security": [{
       "oauth": []
     },
     {
