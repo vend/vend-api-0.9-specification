@@ -2622,7 +2622,7 @@
           "type": "string"
         },
         "account_code_sales": {
-          "description": "Code used to associate sales of the product with a specific account. When POSTing it should be delivered as `account_sales`.",
+          "description": "Code used to associate sales of the product with a specific account. When POSTing it should be delivered as `account_code`.",
           "type": "string"
         },
         "track_inventory": {
