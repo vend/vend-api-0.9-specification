@@ -775,13 +775,6 @@
             "description": "If included, returns only register sales made for the given outlet, identified by ID."
           },
           {
-            "name": "tag",
-            "in": "query",
-            "required": false,
-            "type": "string",
-            "description": "If included, returns only register sales containing a product with a given tag. Note that the complete sale record is returned, including the details of any other products in the same; these may not have the specified tag."
-          },
-          {
             "name": "status[]",
             "in": "query",
             "required": false,
