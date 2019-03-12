@@ -1,12 +1,15 @@
 {
+  "x-stoplight": {
+    "docs": {
+      "showModels": false
+    },
+    "id": "vend/specs/api-0-9"
+  },
   "swagger": "2.0",
   "info": {
     "version": "0.9",
     "title": "API 0.9",
     "description": "The current state of the original Vend API.",
-    "x-stoplight": {
-      "id": "vend/specs/api-0-9"
-    },
     "contact": {
       "name": "Vend Developer Relations",
       "url": "https://developers.vendhq.com",
@@ -3707,19 +3710,10 @@
   },
   "security": [
     {
-      "oauth": []
-    },
-    {
       "personal_token": []
     }
   ],
   "securityDefinitions": {
-    "oauth": {
-      "type": "oauth2",
-      "flow": "accessCode",
-      "authorizationUrl": "https://secure.vendhq.com/connect",
-      "tokenUrl": "http://{$$.env.domain_prefix}.vendhq.com/api/1.0/token"
-    },
     "personal_token": {
       "type": "apiKey",
       "name": "Authorization",
