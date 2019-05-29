@@ -2648,10 +2648,9 @@
           "description": "A comma separated list of tags associated with the product.",
           "type": "string"
         },
-        "brand_id": {
-          "description": "The ID of the brand associated with the product.",
-          "type": "string",
-          "format": "uuid"
+        "brand_name": {
+          "description": "The name of the brand associated with the product.",
+          "type": "string"
         },
         "supplier_name": {
           "description": "Product supplier's name.",
