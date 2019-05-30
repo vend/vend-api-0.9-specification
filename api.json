@@ -2669,7 +2669,7 @@
           "type": "string"
         },
         "account_code": {
-          "description": "Code used to associate sales of the product with a specific account. Value will be returned as `account_code`.",
+          "description": "Code used to associate sales of the product with a specific account. Value will be returned as `account_code_sales`.",
           "type": "string"
         },
         "track_inventory": {
