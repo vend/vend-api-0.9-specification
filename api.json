@@ -2668,8 +2668,8 @@
           "description": "Code used to associate purchase (cost) of the product with a specific account.",
           "type": "string"
         },
-        "account_code_sales": {
-          "description": "Code used to associate sales of the product with a specific account. When POSTing it should be delivered as `account_code`.",
+        "account_code": {
+          "description": "Code used to associate sales of the product with a specific account. Value will be returned as `account_code`.",
           "type": "string"
         },
         "track_inventory": {
