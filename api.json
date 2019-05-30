@@ -2589,7 +2589,7 @@
           "type": "string"
         },
         "source_variant_id": {
-          "description": "Reference ID to an external object. Should be POSTed as `source_variant_id`.",
+          "description": "Reference ID to an external object. Value will be returned as `variant_source_id`.",
           "type": "string"
         },
         "handle": {
