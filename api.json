@@ -2588,7 +2588,7 @@
           "description": "The ID that can be used to reference a product in another system.",
           "type": "string"
         },
-        "variant_source_id": {
+        "source_variant_id": {
           "description": "Reference ID to an external object. Should be POSTed as `source_variant_id`.",
           "type": "string"
         },
