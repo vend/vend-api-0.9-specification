@@ -3063,7 +3063,7 @@
           "format": "uuid"
         },
         "payment_date": {
-          "description": "The date and time of the payment.",
+          "description": "The date and time of the payment in RFC3339 format.",
           "type": "string"
         },
         "amount": {
@@ -3379,7 +3379,7 @@
           "format": "uuid"
         },
         "sale_date": {
-          "description": "The date of the sale. If not provided will be added as the time the sale reached the server.",
+          "description": "The date of the sale in RFC3339 format. If not provided will be added as the time the sale reached the server.",
           "type": "string"
         },
         "note": {
