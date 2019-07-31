@@ -3185,6 +3185,13 @@
           "items": {
             "$ref": "#/definitions/RegisterSaleProductAttribute"
           }
+        },
+        "tax_components": {
+          "description": "Collection of tax components associated with the line item.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/LineItemTaxComponent"
+          }
         }
       }
     },
@@ -3281,6 +3288,13 @@
           "items": {
             "$ref": "#/definitions/RegisterSaleProductAttribute"
           }
+        },
+        "tax_components": {
+          "description": "Collection of tax components associated with the line item.",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/LineItemTaxComponent"
+          }
         }
       },
       "required": [
@@ -3289,6 +3303,25 @@
         "price",
         "tax",
         "tax_id"
+      ]
+    },
+    "LineItemTaxComponent": {
+      "title": "Line Item Tax Component",
+      "type": "object",
+      "properties": {
+        "rate_id": {
+          "description": "Tax rate ID.",
+          "type": "string"
+        },
+        "total_tax": {
+          "description": "Tax total.",
+          "type": "number",
+          "format": "double"
+        }
+      },
+      "required": [
+        "rate_id",
+        "total_tax"
       ]
     },
     "RegisterSaleResponse": {
