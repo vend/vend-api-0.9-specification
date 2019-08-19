@@ -5,10 +5,11 @@ jobs:
     name: curl request
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/bin/curl@master
+    # - uses: actions/bin/curl@master
+    - uses: wei/curl@master
       env:
         STOPLIGHT_DOMAIN: docs.vendhq.com
         STOPLIGHT_TOKEN: ${{ secrets.STOPLIGHT_TOKEN }}
         STOPLIGHT_URL: https://next-api.stoplight.io/docs.release
       with:
-        args: [-XPOST, -H, "Content-Type: application/json;charset=UTF-8", -H, "Authorization: Bearer $STOPLIGHT_TOKEN", --data-binary, '{ "setLive": true }', "$STOPLIGHT_URL?domain=$STOPLIGHT_DOMAIN", --compressed]
+        args: -X POST -H "Content-Type: application/json;charset=UTF-8" -H "Authorization: Bearer $STOPLIGHT_TOKEN" --data-binary '{ "setLive": true }' "$STOPLIGHT_URL?domain=$STOPLIGHT_DOMAIN" --compressed
