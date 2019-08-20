@@ -1,30 +1,35 @@
-# on: push
-# name: Trigger docs release in Stoplight
-# jobs:
-#   curl:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: curl request
-#         uses: actions/bin/curl@master
-#         env:
-#           STOPLIGHT_DOMAIN: docs.vendhq.com
-#           STOPLIGHT_TOKEN: ${{ secrets.STOPLIGHT_TOKEN }}
-#           STOPLIGHT_URL: https://next-api.stoplight.io/docs.release
-#         with:
-#           # args: "-H" "Content-Type: application/json;charset=UTF-8" "-H" "Authorization: Bearer $STOPLIGHT_TOKEN" "--data-binary" '{ "setLive": true }' "$STOPLIGHT_URL?domain=$STOPLIGHT_DOMAIN" "--compressed"
-#           args: $STOPLIGHT_URL?domain=$STOPLIGHT_DOMAIN
-
 on: push
-name: on push
+name: Trigger docs release in Stoplight
 jobs:
+  docs-list:
+    runs-on: ubuntu-latest
+    steps:
+      - name: curl request
+        uses: actions/bin/curl@master
+        env:
+          STOPLIGHT_DOMAIN: docs.vendhq.com
+          STOPLIGHT_TOKEN: ${{ secrets.STOPLIGHT_TOKEN }}
+          STOPLIGHT_URL: https://next-api.stoplight.io/docs.list
+        with:
+          args: "-H" "Authorization: Bearer $STOPLIGHT_TOKEN" "$STOPLIGHT_URL?domain=$STOPLIGHT_DOMAIN"
+  docs-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: curl request
+        uses: actions/bin/curl@master
+        env:
+          STOPLIGHT_DOMAIN: docs.vendhq.com
+          STOPLIGHT_TOKEN: ${{ secrets.STOPLIGHT_TOKEN }}
+          STOPLIGHT_URL: https://next-api.stoplight.io/docs.release
+        with:
+          args: "-H" "Authorization: Bearer $STOPLIGHT_TOKEN" "$STOPLIGHT_URL?domain=$STOPLIGHT_DOMAIN"
+          # args: "-H" "Content-Type: application/json;charset=UTF-8" "-H" "Authorization: Bearer $STOPLIGHT_TOKEN" "--data-binary" '{ "setLive": true }' "$STOPLIGHT_URL?domain=$STOPLIGHT_DOMAIN" "--compressed"
   sayHi:
     name: say hi
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
     - name: say hi
       uses: docker/whalesay@master
       with:
         entrypoint: cowsay
         args: hello actions
-        
