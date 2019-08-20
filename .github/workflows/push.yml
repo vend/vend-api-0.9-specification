@@ -1,38 +1,12 @@
 name: Trigger docs release in Stoplight
 on: push
 jobs:
-  docs-list:
+  docs-release:
     runs-on: ubuntu-latest
     steps:
     - name: curl request
       env:
+        DOMAIN: docs.vendhq.com
         TOKEN: ${{ secrets.STOPLIGHT_TOKEN }}
-        URL: https://next-api.stoplight.io/projects/17493
-      run: 'curl -H "Authorization: Bearer $TOKEN" $URL'
-
-
-# on: push
-# name: Trigger docs release in Stoplight
-# jobs:
-#   docs-list:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - uses: actions/checkout@v1
-#       - name: curl request
-#         env:
-#           STOPLIGHT_DOMAIN: docs.vendhq.com
-#           STOPLIGHT_TOKEN: ${{ secrets.STOPLIGHT_TOKEN }}
-#           STOPLIGHT_URL: https://next-api.stoplight.io/projects/17493
-#         run: curl "-H Authorization: Bearer $STOPLIGHT_TOKEN $STOPLIGHT_URL"
-#   docs-release:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: curl request
-#         uses: actions/bin/curl@master
-#         env:
-#           DOMAIN: docs.vendhq.com
-#           TOKEN: ${{ secrets.STOPLIGHT_TOKEN }}
-#           URL: https://next-api.stoplight.io/docs.release
-#         with:
-#           args: "-H Authorization: Bearer $TOKEN $URL?domain=$DOMAIN"
-#           # args: "-H" "Content-Type: application/json;charset=UTF-8" "-H" "Authorization: Bearer $TOKEN" "--data-binary" '{ "setLive": true }' "$URL?domain=$DOMAIN" "--compressed"
+        URL: https://next-api.stoplight.io/docs.release
+      run: 'curl -H "Content-Type: application/json;charset=UTF-8" -H "Authorization: Bearer $TOKEN" --data-binary" {"setLive": true} $URL?domain=$DOMAIN --compressed'
