@@ -1,5 +1,8 @@
 name: Trigger docs release in Stoplight
-on: push
+on:
+  push:
+    branches:
+    - master
 jobs:
   docs-release:
     runs-on: ubuntu-latest
