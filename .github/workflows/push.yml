@@ -24,12 +24,3 @@ jobs:
         with:
           args: "-H Authorization: Bearer $STOPLIGHT_TOKEN $STOPLIGHT_URL?domain=$STOPLIGHT_DOMAIN"
           # args: "-H" "Content-Type: application/json;charset=UTF-8" "-H" "Authorization: Bearer $STOPLIGHT_TOKEN" "--data-binary" '{ "setLive": true }' "$STOPLIGHT_URL?domain=$STOPLIGHT_DOMAIN" "--compressed"
-  sayHi:
-    name: say hi
-    runs-on: ubuntu-latest
-    steps:
-    - name: say hi
-      uses: docker/whalesay@master
-      with:
-        entrypoint: cowsay
-        args: hello actions
