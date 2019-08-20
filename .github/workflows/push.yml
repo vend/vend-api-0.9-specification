@@ -9,9 +9,9 @@ jobs:
         env:
           STOPLIGHT_DOMAIN: docs.vendhq.com
           STOPLIGHT_TOKEN: ${{ secrets.STOPLIGHT_TOKEN }}
-          STOPLIGHT_URL: https://next-api.stoplight.io/docs.list
+          STOPLIGHT_URL: https://next-api.stoplight.io/projects/17493
         with:
-          args: "-H Authorization: Bearer $STOPLIGHT_TOKEN $STOPLIGHT_URL?domain=$STOPLIGHT_DOMAIN"
+          args: "-H Authorization: Bearer $STOPLIGHT_TOKEN $STOPLIGHT_URL"
   docs-release:
     runs-on: ubuntu-latest
     steps:
