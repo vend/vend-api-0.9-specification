@@ -9,4 +9,5 @@ jobs:
         DOMAIN: docs.vendhq.com
         TOKEN: ${{ secrets.STOPLIGHT_TOKEN }}
         URL: https://next-api.stoplight.io/docs.release
-      run: 'curl -H "Content-Type: application/json;charset=UTF-8" -H "Authorization: Bearer $TOKEN" --data-binary {"setLive": true} $URL?domain=$DOMAIN --compressed'
+      run: >-
+        curl -H "Content-Type: application/json;charset=UTF-8" -H "Authorization: Bearer $TOKEN" --data-binary '{"setLive": true}' $URL?domain=$DOMAIN --compressed
