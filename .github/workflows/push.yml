@@ -4,12 +4,13 @@ jobs:
   docs-list:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v1
       - name: curl request
         env:
           STOPLIGHT_DOMAIN: docs.vendhq.com
           STOPLIGHT_TOKEN: ${{ secrets.STOPLIGHT_TOKEN }}
           STOPLIGHT_URL: https://next-api.stoplight.io/projects/17493
-        run: curl -H "Authorization: Bearer $STOPLIGHT_TOKEN" $STOPLIGHT_URL
+        run: curl "-H Authorization: Bearer $STOPLIGHT_TOKEN $STOPLIGHT_URL"
   docs-release:
     runs-on: ubuntu-latest
     steps:
