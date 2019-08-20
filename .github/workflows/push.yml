@@ -6,10 +6,9 @@ jobs:
     steps:
     - name: curl request
       env:
-        # TOKEN: ${{ secrets.SOME_TOKEN }}
-        TOKEN: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzdG9wbGlnaHR8NTkzIiwidXNlcm5hbWUiOiJwenVyZWsiLCJlbWFpbCI6InAuenVyZWtAZ21haWwuY29tIiwibmFtZSI6IlBpb3RyIFp1cmVrIiwiaWF0IjoxNTY2MjkxNTMwLCJrZXkiOiI4U1JwSlN1MUJ1dHdpdXhUdjl1RiJ9.ncZFT7O4QTs3bdqdto1FZr1FkmpOv_10eVZVYZV7krw
+        TOKEN: ${{ secrets.STOPLIGHT_TOKEN }}
         URL: https://next-api.stoplight.io/projects/17493
-      run: 'curl -H "Authorization: Bearer $TOKEN" $URL'
+      run: curl -H "Authorization\: Bearer $TOKEN" $URL
 
 
 # on: push
