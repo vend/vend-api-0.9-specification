@@ -8,7 +8,7 @@ jobs:
       env:
         TOKEN: ${{ secrets.SOME_TOKEN }}
         URL: https://next-api.stoplight.io/projects/17493
-      run: curl $URL
+      run: 'curl -H "Authorization: Bearer $TOKEN" $URL'
 
 
 # on: push
